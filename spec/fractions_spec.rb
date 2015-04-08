@@ -5,7 +5,9 @@ describe "Adding fractions" do
     expect(Fraction.new(1).plus(Fraction.new(1)).int_value).to eq(2)
  end
 
- it "adds a +ve number to a small -ve to give a +ve sum"
+ it "adds a +ve number to a small -ve to give a +ve sum" do
+    expect(Fraction.new(2).plus(Fraction.new(-1)).int_value).to eq(1)
+ end 
 
  it "adds a +ve number to a -ve number of equal magnitude to give 0"
 
