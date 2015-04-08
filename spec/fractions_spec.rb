@@ -24,4 +24,12 @@ describe "Adding fractions" do
  it "adds two -ve numbers to yield another negative number" do
     expect(Fraction.new(-1).plus(Fraction.new(-1)).int_value).to eq(-2)
  end
+
+ it "adds two +ve fractions to yield another +ve fraction"
+
+ it "adds a +ve fraction to a small -ve fraction to yield a +ve fraction"
+
+ it "adds a big -ve fraction to a small +ve one to yield a -ve fraction"
+
+ it "adds a +ve fraction to a -ve fraction of equal magitude to yield 0"
 end
