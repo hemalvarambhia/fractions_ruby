@@ -1,5 +1,9 @@
+require_relative "../lib/fraction"
+
 describe "Adding fractions" do
- it "adds two +ve numbers to give a +ve sum"
+ it "adds two +ve numbers to give a +ve sum" do
+    expect(Fraction.new(1).plus(Fraction.new(1)).int_value).to eq(2)
+ end
 
  it "adds a +ve number to a small -ve to give a +ve sum"
 
