@@ -17,7 +17,11 @@ describe "Adding fractions" do
     expect(Fraction.new(1).plus(Fraction.new(-1)).int_value).to eq(0)
  end
 
- it "adds a small +ve number to a large -ve number to give a -ve sum"
+ it "adds a small +ve number to a large -ve number to give a -ve sum" do
+    expect(Fraction.new(-2).plus(Fraction.new(1)).int_value).to eq(-1)
+ end
 
- it "adds two -ve numbers to yield another negative number"
+ it "adds two -ve numbers to yield another negative number" do
+    expect(Fraction.new(-1).plus(Fraction.new(-1)).int_value).to eq(-2)
+ end
 end
