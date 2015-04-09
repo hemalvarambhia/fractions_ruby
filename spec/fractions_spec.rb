@@ -25,7 +25,10 @@ describe "Adding fractions" do
     expect(Fraction.new(-1).plus(Fraction.new(-1)).int_value).to eq(-2)
  end
 
- it "adds two +ve fractions to yield another +ve fraction"
+ it "adds two +ve fractions to yield another +ve fraction" do
+    expect(Fraction.new(1, 5).plus(Fraction.new(1, 5)).numerator).to eq(2)
+    expect(Fraction.new(1, 5).plus(Fraction.new(1, 5)).denominator).to eq(5)
+ end
 
  it "adds a +ve fraction to a small -ve fraction to yield a +ve fraction"
 
