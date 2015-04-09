@@ -40,9 +40,5 @@ describe "Adding fractions" do
     expect(Fraction.new(-2, 5).plus(Fraction.new(1, 5)).denominator).to eq(5)
  end
 
- it "adds a big -ve fraction to a small +ve one to yield a -ve fraction" do
-        
- end
-
  it "adds a +ve fraction to a -ve fraction of equal magitude to yield 0"
 end
