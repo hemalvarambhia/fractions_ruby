@@ -25,6 +25,10 @@ module Math
       return false if @denominator != other.denominator
       true
     end
+
+    def ==(other)
+    	eql?(other)
+    end
   end
 end
 
