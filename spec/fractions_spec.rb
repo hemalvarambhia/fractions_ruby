@@ -53,6 +53,23 @@ describe "Adding fractions" do
      expect(Fraction.new(-2, 5).plus(Fraction.new(-1, 5)).denominator).to eq(5)
    end
  end
+
+ context "fractions with the different denominators" do
+  it "adds two +ve fractions correctly" do
+     expect(Fraction.new(1, 2).plus(Fraction.new(1, 4)).numerator).to eq(3)
+     expect(Fraction.new(1, 2).plus(Fraction.new(1, 4)).denominator).to eq(4)
+  end
+
+  it "adds a +ve fraction to a -ve one correctly" do
+     expect(Fraction.new(1, 2).plus(Fraction.new(-1, 4)).numerator).to eq(1)
+     expect(Fraction.new(1, 2).plus(Fraction.new(-1, 4)).denominator).to eq(4)
+  end
+
+  it "adds two +ve fractions whose denominators are not multiples of each other" do
+     expect(Fraction.new(1, 3).plus(Fraction.new(1, 2)).numerator).to eq(5)
+     expect(Fraction.new(1, 3).plus(Fraction.new(1, 2)).denominator).to eq(6)
+  end
+ end
 end
 
 describe "Reducing fractions" do
