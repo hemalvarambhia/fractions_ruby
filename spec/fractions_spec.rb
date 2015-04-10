@@ -88,3 +88,21 @@ describe "Reducing fractions" do
     expect(Math::Fraction.new(4, 6).denominator).to eq(3)
  end
 end
+
+describe "Equating fractions" do
+ it "marks two fractions with the same numerator and denominator" do
+    expect(Math::Fraction.new(1, 2).eql?(Math::Fraction.new(1, 2))).to eq(true)
+ end
+
+ it "marks 2/4 as being equal to 1/2" do
+     expect(Math::Fraction.new(1, 2).eql?(Math::Fraction.new(2, 4))).to eq(true)
+ end
+
+ it "marks two fractions with different numerators as being unequal" do
+    expect(Math::Fraction.new(1, 3).eql?(Math::Fraction.new(2, 3))).to eq(false)
+ end
+
+ it "marks two fractions with different denominators are being unequal" do
+    expect(Math::Fraction.new(1, 3).eql?(Math::Fraction.new(1, 2))).to eq(false)
+ end
+end

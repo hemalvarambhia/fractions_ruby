@@ -19,6 +19,12 @@ module Math
     def int_value
      @numerator
     end
+
+    def eql?(other)
+      return false if @numerator != other.numerator
+      return false if @denominator != other.denominator
+      true
+    end
   end
 end
 
