@@ -94,4 +94,12 @@ describe "Equating fractions" do
  it "marks two fractions with different denominators are being unequal" do
     expect(Math::Fraction.new(1, 3)).to_not eq(Math::Fraction.new(1, 2))
  end
+
+ it "marks 1/-3 as being equal to -1/3" do
+    expect(Math::Fraction.new(1, -3)).to eq(Math::Fraction.new(-1, 3))
+ end
+
+ it "marks -1/-3 as being equal to 1/3" do
+    expect(Math::Fraction.new(-1, -3)).to eq(Math::Fraction.new(1, 3))
+ end
 end

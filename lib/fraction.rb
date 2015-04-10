@@ -4,8 +4,10 @@ module Math
 
     def initialize(numerator, denominator = 1)
      gcd = numerator.gcd(denominator)
-     @numerator = numerator/gcd
-     @denominator = denominator/gcd
+     factor = 1
+     factor = -1 if denominator < 0
+     @numerator = factor * numerator/gcd
+     @denominator = factor * denominator/gcd
     end
 
     def plus(another)
