@@ -50,3 +50,15 @@ describe "Adding fractions" do
    expect(Fraction.new(-2, 5).plus(Fraction.new(-1, 5)).denominator).to eq(5)
  end
 end
+
+describe "Reducing fractions" do
+ it "should reduce 2/4 to 1/2" do
+    expect(Fraction.new(2, 4).numerator).to eq(1)
+    expect(Fraction.new(2, 4).denominator).to eq(2)
+ end
+
+ it "should reduce 4/6 to 2/3" do
+    expect(Fraction.new(4, 6).numerator).to eq(2)
+    expect(Fraction.new(4, 6).denominator).to eq(3)
+ end
+end

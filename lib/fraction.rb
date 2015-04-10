@@ -1,8 +1,10 @@
 class Fraction
  attr_reader :numerator, :denominator
+ 
  def initialize(numerator, denominator = 1)
-   @numerator = numerator
-   @denominator = denominator
+   gcd = numerator.gcd(denominator)
+   @numerator = numerator/gcd
+   @denominator = denominator/gcd
  end
 
  def plus(another_fraction)
