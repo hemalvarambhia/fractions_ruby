@@ -20,14 +20,10 @@ module Math
      @numerator
     end
 
-    def eql?(other)
+    def ==(other)
       return false if @numerator != other.numerator
       return false if @denominator != other.denominator
       true
-    end
-
-    def ==(other)
-    	eql?(other)
     end
   end
 end
