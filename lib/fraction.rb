@@ -18,10 +18,6 @@ module Math
         sum_denominator)
     end
 
-    def int_value
-     @numerator
-    end
-
     def ==(other)
       return false if @numerator != other.numerator
       return false if @denominator != other.denominator
