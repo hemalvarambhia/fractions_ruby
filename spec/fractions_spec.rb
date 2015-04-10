@@ -78,12 +78,12 @@ describe "Reducing fractions" do
     expect(Fraction.new(1, 3).denominator).to eq(3)
  end
 
- it "should reduce 2/4 to 1/2" do
+ it "reduces 2/4 to 1/2" do
     expect(Fraction.new(2, 4).numerator).to eq(1)
     expect(Fraction.new(2, 4).denominator).to eq(2)
  end
 
- it "should reduce 4/6 to 2/3" do
+ it "reduces 4/6 to 2/3" do
     expect(Fraction.new(4, 6).numerator).to eq(2)
     expect(Fraction.new(4, 6).denominator).to eq(3)
  end
