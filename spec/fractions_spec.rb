@@ -73,6 +73,11 @@ describe "Adding fractions" do
 end
 
 describe "Reducing fractions" do
+ it "does not reduce a simple fraction any further" do
+    expect(Fraction.new(1, 3).numerator).to eq(1)
+    expect(Fraction.new(1, 3).denominator).to eq(3)
+ end
+
  it "should reduce 2/4 to 1/2" do
     expect(Fraction.new(2, 4).numerator).to eq(1)
     expect(Fraction.new(2, 4).denominator).to eq(2)
