@@ -7,8 +7,12 @@ class Fraction
    @denominator = denominator/gcd
  end
 
- def plus(another_fraction)
-   Fraction.new(@numerator + another_fraction.numerator, @denominator)
+ def plus(another)
+   sum_denominator = @denominator * another.denominator
+   Fraction.new(
+	@numerator*(sum_denominator/@denominator) + 
+	another.numerator*(sum_denominator/another.denominator), 
+	sum_denominator)
  end
 
  def int_value
