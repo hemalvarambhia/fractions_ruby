@@ -18,6 +18,14 @@ module Math
         sum_denominator)
     end
 
+    def times(another)
+      if another == Fraction.new(1)
+        self
+      else
+        another
+      end
+    end
+
     def ==(other)
       return false if @numerator != other.numerator
       return false if @denominator != other.denominator

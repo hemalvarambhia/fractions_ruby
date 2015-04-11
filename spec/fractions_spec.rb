@@ -103,3 +103,17 @@ describe "Equating fractions" do
     expect(Math::Fraction.new(-1, -3)).to eq(Math::Fraction.new(1, 3))
  end
 end
+
+describe "Multiplying fractions" do
+  context "fraction multiplied by unity" do
+    it "yields the original fraction" do
+      expect(Math::Fraction.new(1, 2).times(Math::Fraction.new(1))).to eq(Math::Fraction.new(1, 2))
+    end
+  end
+  
+  context "unity multiplied by fraction" do
+    it "yields the original fraction" do
+      expect(Math::Fraction.new(1).times(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(1, 2))
+    end
+  end
+end
