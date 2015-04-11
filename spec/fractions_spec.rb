@@ -116,4 +116,18 @@ describe "Multiplying fractions" do
       expect(Math::Fraction.new(1).times(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(1, 2))
     end
   end
+
+  context "fractions multiplied by fraction" do
+    it "computes the product correctly" do
+      expect(Math::Fraction.new(1, 2).times(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(1, 4))
+      expect(Math::Fraction.new(1, 3).times(Math::Fraction.new(1, 4))).to eq(Math::Fraction.new(1, 12))
+    end
+  end 
+
+  context "fraction multiplied by a integer that cancels denominator" do
+    it "computed the product correctly" do
+      expect(Math::Fraction.new(1, 2).times(Math::Fraction.new(2))).to eq(Math::Fraction.new(1))
+      expect(Math::Fraction.new(4).times(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(2))
+    end
+  end 
 end

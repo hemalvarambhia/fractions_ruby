@@ -19,11 +19,7 @@ module Math
     end
 
     def times(another)
-      if another == Fraction.new(1)
-        self
-      else
-        another
-      end
+      Fraction.new(@numerator * another.numerator, @denominator * another.denominator)
     end
 
     def ==(other)
