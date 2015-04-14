@@ -47,6 +47,10 @@ describe "Adding fractions" do
    it "adds two big -ve fractions to yield a -ve fraction" do
      expect(Math::Fraction.new(-2, 5).plus(Math::Fraction.new(-1, 5))).to eq(Math::Fraction.new(-3, 5))
    end
+
+   it "adds 1/2 and 1/2 to yield unity" do
+     expect(Math::Fraction.new(1, 2).plus(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(1))
+   end
  end
 
  context "fractions with the different denominators" do
@@ -61,6 +65,12 @@ describe "Adding fractions" do
   it "adds two +ve fractions whose denominators are not multiples of each other" do
      expect(Math::Fraction.new(1, 3).plus(Math::Fraction.new(1, 2))).to eq(Math::Fraction.new(5, 6))
   end
+ end
+
+ context "integer and fractions" do
+   it "adds an integer and fraction correctly" do
+     expect(Math::Fraction.new(1).plus(Math::Fraction.new(1, 4))).to eq(Math::Fraction.new(5, 4))
+   end
  end
 end
 
