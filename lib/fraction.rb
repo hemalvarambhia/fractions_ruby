@@ -4,8 +4,7 @@ module Math
 
     def initialize(numerator, denominator = 1)
      gcd = numerator.gcd(denominator)
-     factor = 1
-     factor = -1 if denominator < 0
+     factor = denominator < 0 ? -1 : 1
      @numerator = factor * numerator/gcd
      @denominator = factor * denominator/gcd
     end
@@ -13,14 +12,16 @@ module Math
     def +(another)
       sum_denominator = denominator * another.denominator
       Fraction.new(
-        numerator*(sum_denominator/denominator) +
-        another.numerator*(sum_denominator/another.denominator),
+        numerator * (sum_denominator/denominator) +
+        another.numerator * (sum_denominator/another.denominator),
         sum_denominator
       )
     end
 
     def times(another)
-      Fraction.new(@numerator * another.numerator, @denominator * another.denominator)
+      Fraction.new(
+        @numerator * another.numerator,
+        @denominator * another.denominator)
     end
 
     def ==(other)
