@@ -11,22 +11,22 @@ module Math
 
     def +(another)
       sum_denominator = denominator * another.denominator
-      Fraction.new(
+      sum_numerator =
         numerator * (sum_denominator/denominator) +
-        another.numerator * (sum_denominator/another.denominator),
-        sum_denominator
-      )
+        another.numerator * (sum_denominator/another.denominator)
+
+      Fraction.new(sum_numerator, sum_denominator)
     end
 
-    def times(another)
+    def *(another)
       Fraction.new(
-        @numerator * another.numerator,
-        @denominator * another.denominator)
+        numerator * another.numerator,
+        denominator * another.denominator)
     end
 
     def ==(other)
-      return false if @numerator != other.numerator
-      return false if @denominator != other.denominator
+      return false if numerator != other.numerator
+      return false if denominator != other.denominator
       true
     end
   end
