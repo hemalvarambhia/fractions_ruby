@@ -10,12 +10,13 @@ module Math
      @denominator = factor * denominator/gcd
     end
 
-    def plus(another)
-     sum_denominator = @denominator * another.denominator
-     Fraction.new(
-        @numerator*(sum_denominator/@denominator) +
+    def +(another)
+      sum_denominator = denominator * another.denominator
+      Fraction.new(
+        numerator*(sum_denominator/denominator) +
         another.numerator*(sum_denominator/another.denominator),
-        sum_denominator)
+        sum_denominator
+      )
     end
 
     def times(another)
